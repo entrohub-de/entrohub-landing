@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrohub — Plenty of contact. Almost no connection. We fix that.</title>
+  <meta name="description" content="Entrohub is a Berlin community for people living between two worlds. Curated evenings for builders in AI, product, engineering and design. Not networking. No pitching. Just people who see each other." />
+  <link rel="canonical" href="https://entrohub.io/" />
+  <link rel="icon" type="image/png" href="/assets/entrohub-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Entrohub" />
+  <meta property="og:title" content="Entrohub — Plenty of contact. Almost no connection. We fix that." />
+  <meta property="og:description" content="A Berlin community for people living between two worlds. Curated evenings for builders in AI, product, engineering and design. Not networking." />
+  <meta property="og:url" content="https://entrohub.io/" />
+  <meta property="og:image" content="https://entrohub.io/assets/entrohub-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured data: anchors the entity for AI / search (GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Entrohub",
+    "alternateName": "Entrohub Berlin",
+    "url": "https://entrohub.io/",
+    "logo": "https://entrohub.io/assets/entrohub-icon.png",
+    "description": "A Berlin community for people living between two worlds. Entrohub runs curated evenings for builders and operators in AI, product, engineering and design. It is not networking; it exists to turn contact into real connection.",
+    "foundingLocation": { "@type": "City", "name": "Berlin" },
+    "areaServed": ["Berlin", "Europe"],
+    "email": "hello@entrohub.io",
+    "sameAs": [
+      "https://www.meetup.com/entrohub/",
+      "https://luma.com/entrohub"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#14161c; --muted:#5c5f6e;
+      --line:#e9e9f1; --card:#f6f6fb;
+      --blue:#4c5be4; --indigo:#3a34b0; --light-blue:#a8b2f2; --orange:#ee7a2e;
+      --accent:#4c5be4; --accent-fg:#ffffff;
+      --navy:#0f1230; --navy-2:#171a3d;
+      --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+      --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+      --maxw:1080px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0f1230; --fg:#eef0fb; --muted:#a6a9c8;
+             --line:#262a52; --card:#171a3d;
+             --accent:#8f9bf5; --accent-fg:#0f1230; --orange:#f0913e; }
+    }
+    :root[data-theme="light"]{ --bg:#ffffff; --fg:#14161c; --muted:#5c5f6e; --line:#e9e9f1; --card:#f6f6fb; --accent:#4c5be4; --accent-fg:#fff; --orange:#ee7a2e; }
+    :root[data-theme="dark"]{ --bg:#0f1230; --fg:#eef0fb; --muted:#a6a9c8; --line:#262a52; --card:#171a3d; --accent:#8f9bf5; --accent-fg:#0f1230; --orange:#f0913e; }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--fg);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.55; -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+    .btn{
+      display:inline-block; background:var(--accent); color:var(--accent-fg);
+      padding:14px 26px; border-radius:999px; text-decoration:none;
+      font-weight:600; font-size:15px; letter-spacing:.01em;
+    }
+    .btn.ghost{ background:transparent; color:#fff; border:1px solid rgba(255,255,255,.28); }
+    .btn.ghost-fg{ background:transparent; color:var(--fg); border:1px solid var(--line); }
+
+    /* Header */
+    header{ border-bottom:1px solid var(--line); background:var(--bg) }
+    header .wrap{ display:flex; align-items:center; justify-content:space-between; height:70px }
+    .logo-img{ height:30px; width:auto; display:block }
+    .logo-dark{ display:none } .logo-light{ display:block }
+    @media (prefers-color-scheme: dark){ .logo-dark{display:block} .logo-light{display:none} }
+    :root[data-theme="light"] .logo-dark{display:none} :root[data-theme="light"] .logo-light{display:block}
+    :root[data-theme="dark"] .logo-dark{display:block} :root[data-theme="dark"] .logo-light{display:none}
+    nav a{ margin-left:26px; text-decoration:none; color:var(--muted); font-size:15px }
+    nav a:hover{ color:var(--fg) }
+    @media(max-width:680px){ nav{display:none} }
+
+    /* Hero — brand-signature navy, always dark */
+    .hero{
+      position:relative; overflow:hidden; color:#eef0fb;
+      background:
+        radial-gradient(120% 90% at 82% 18%, rgba(76,91,228,.45) 0%, rgba(58,52,176,.10) 40%, transparent 70%),
+        radial-gradient(90% 80% at 8% 0%, rgba(168,178,242,.20) 0%, transparent 55%),
+        linear-gradient(160deg, #141838 0%, #0f1230 55%, #191331 100%);
+    }
+    .hero .wrap{ position:relative; z-index:2; padding:88px 24px 78px; max-width:var(--maxw) }
+    .eyebrow{ color:var(--light-blue); font-weight:600; letter-spacing:.16em;
+              text-transform:uppercase; font-size:12px; margin:0 0 18px }
+    h1{ font-size:clamp(30px,4.4vw,48px); line-height:1.08; margin:0 0 20px;
+        letter-spacing:-.02em; font-weight:800; max-width:16ch }
+    h1 .em{ color:var(--light-blue) }
+    .lede{ font-size:clamp(16px,1.5vw,18px); color:#c7cae6; max-width:52ch; margin:0 0 32px }
+    .cta-row{ display:flex; gap:14px; flex-wrap:wrap; align-items:center }
+    .micro{ margin:22px 0 0; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase;
+            color:#8a8fc0; display:flex; gap:12px; flex-wrap:wrap; align-items:center }
+    .micro .sep{ width:4px; height:4px; border-radius:50%; background:var(--orange); display:inline-block }
+
+    /* Curation / trust strip */
+    .strip{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--card) }
+    .strip .wrap{ display:flex; justify-content:center; gap:16px; flex-wrap:wrap; align-items:center;
+                  padding:18px 24px; font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted) }
+    .strip .sep{ width:4px; height:4px; border-radius:50%; background:var(--orange); display:inline-block }
+
+    /* Sections */
+    section{ padding:60px 0; border-top:1px solid var(--line) }
+    h2{ font-size:clamp(22px,2.6vw,30px); letter-spacing:-.01em; margin:0 0 14px; max-width:22ch; font-weight:800 }
+    .lead{ color:var(--muted); font-size:16px; max-width:60ch; margin:0 0 8px }
+    .lead.big{ font-family:var(--serif); font-size:clamp(22px,2.6vw,30px); color:var(--fg); font-weight:500; line-height:1.42; max-width:24ch; letter-spacing:.005em }
+    .accent-line{ color:var(--orange); font-weight:700 }
+    .step-num{ font-family:var(--mono); font-size:13px; letter-spacing:.08em; color:var(--accent);
+               display:block; margin-bottom:16px; font-weight:600 }
+
+    .grid{ display:grid; gap:18px; grid-template-columns:repeat(3,1fr); margin-top:34px }
+    @media(max-width:820px){ .grid{ grid-template-columns:1fr } }
+    .card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px }
+    .card h3{ margin:0 0 10px; font-size:17px }
+    .card p{ margin:0; color:var(--muted); font-size:15px }
+    .dot{ width:10px; height:10px; border-radius:50%; display:inline-block; margin-bottom:16px }
+    .d1{ background:var(--light-blue) } .d2{ background:var(--blue) } .d3{ background:var(--orange) }
+
+    .not{ background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
+    .not ul{ list-style:none; padding:0; margin:24px 0 0; display:grid; gap:12px; max-width:48ch }
+    .not li{ font-size:16px; padding-left:28px; position:relative; color:var(--fg) }
+    .not li::before{ content:"×"; position:absolute; left:0; color:var(--orange); font-weight:800 }
+
+    blockquote{ margin:0; font-family:var(--serif); font-style:italic; font-size:clamp(22px,2.6vw,30px); line-height:1.4; font-weight:500; max-width:26ch; letter-spacing:0 }
+    blockquote .src{ display:block; margin-top:18px; font-size:14px; color:var(--muted); font-weight:400 }
+
+    .join{ text-align:center }
+    .join h2{ margin:0 auto 16px } .join .lead{ margin:0 auto 32px }
+
+    footer{ border-top:1px solid var(--line); padding:44px 0; color:var(--muted); font-size:15px }
+    footer .wrap{ display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; align-items:center }
+    footer a{ text-decoration:none; color:var(--muted); margin-right:20px }
+    footer a:hover{ color:var(--fg) }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a href="/" aria-label="Entrohub home">
+        <img class="logo-img logo-light" src="/assets/entrohub-logo-dark-text.png" alt="Entrohub" />
+        <img class="logo-img logo-dark" src="/assets/entrohub-logo-light-text.png" alt="Entrohub" />
+      </a>
+      <nav>
+        <a href="#connection">Why we exist</a>
+        <a href="#how">How it works</a>
+        <a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Berlin · A community for people between two worlds</p>
+        <h1>Plenty of contact. <span class="em">Almost no connection.</span></h1>
+        <p class="lede">Bars, apps, networking events. Most of it manufactures contact, not connection. Entrohub is where builders who live between two worlds actually get seen.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://luma.com/entrohub">Join the next evening</a>
+          <a class="btn ghost" href="#connection">What is Entrohub?</a>
+        </div>
+        <p class="micro">By application <span class="sep"></span> Around twenty per evening <span class="sep"></span> No pitching</p>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="wrap">
+        <span>Curated by hand</span><span class="sep"></span>
+        <span>By application &amp; referral</span><span class="sep"></span>
+        <span>Same-kind rooms, not open door</span>
+      </div>
+    </div>
+
+    <section id="connection">
+      <div class="wrap">
+        <p class="lead big">The loneliness isn't being alone. It's being in a room full of people and not one of them seeing you.</p>
+        <p class="lead" style="margin-top:24px">Immigrants feel it in concentrate. You're suspended between two worlds, fully at home in neither, and a part of you belongs to both. It makes you lonely. It also makes you open. Entrohub is for people who have the fire and just aren't wired together yet.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Connection needs three things in the room.</h2>
+        <p class="lead">It doesn't happen on its own. When all three are present, it does. It doesn't have to be deep. Real can happen in the middle of fun.</p>
+        <div class="grid">
+          <div class="card">
+            <span class="dot d1"></span>
+            <h3>Trust</h3>
+            <p>We're the same kind of people. Nobody here has to perform.</p>
+          </div>
+          <div class="card">
+            <span class="dot d2"></span>
+            <h3>Permission</h3>
+            <p>You're allowed to walk up to a stranger. Be direct. Be real.</p>
+          </div>
+          <div class="card">
+            <span class="dot d3"></span>
+            <h3>Collision</h3>
+            <p>Different backgrounds, different roads, put in one room. That's where things come out.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="not">
+      <div class="wrap">
+        <h2>What we are not.</h2>
+        <ul>
+          <li>Not networking.</li>
+          <li>Not a place to collect cards, hunt for resources, or sell yourself.</li>
+          <li>Not a performance for other people to watch.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>How an evening works.</h2>
+        <p class="lead">Enough structure to make connection easy. Never so much it feels like a workshop.</p>
+        <div class="grid">
+          <div class="card"><span class="step-num">01</span><h3>You apply</h3><p>Tell us who you are and what you're building. We keep the room balanced on purpose.</p></div>
+          <div class="card"><span class="step-num">02</span><h3>You show up</h3><p>A relaxed venue, around twenty people, two light rounds that break the ice for you. No pitching. No stage.</p></div>
+          <div class="card"><span class="step-num">03</span><h3>You leave with people</h3><p>Not business cards. Conversations worth continuing next week.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <blockquote>
+          You don't need to be impressive. You just need to be real.
+          <!-- This is the brand line, not a testimonial. Keep it. -->
+          <span class="src">— From what we tell every new member</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="join" class="join">
+      <div class="wrap">
+        <h2>Come to the next one.</h2>
+        <p class="lead">We run regular evenings in Berlin. Grab a spot at the next Builders Night.</p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="btn" href="https://luma.com/entrohub">See upcoming events</a>
+          <a class="btn ghost-fg" href="https://www.meetup.com/entrohub/">Join on Meetup</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© 2026 Entrohub · Berlin</div>
+      <div>
+        <a href="https://luma.com/entrohub">Luma</a>
+        <a href="https://www.meetup.com/entrohub/">Meetup</a>
+        <a href="mailto:hello@entrohub.io">hello@entrohub.io</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
