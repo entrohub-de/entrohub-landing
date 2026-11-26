@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Entrohub — Plenty of contact. Almost no connection. We fix that.</title>
-  <meta name="description" content="Entrohub is a Berlin community for people living between two worlds. Curated evenings for builders in AI, product, engineering and design. Not networking. No pitching. Just people who see each other." />
+  <title>Entrohub — Small rooms in Berlin. Leave with one real next step.</title>
+  <meta name="description" content="Entrohub runs small evenings in Berlin for Chinese and international founders, builders and operators. Around twenty people, one question per night, three short rounds. You leave with a name and a next step, not a stack of cards." />
   <link rel="canonical" href="https://entrohub.io/" />
   <link rel="icon" type="image/png" href="/assets/entrohub-icon.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Entrohub" />
-  <meta property="og:title" content="Entrohub — Plenty of contact. Almost no connection. We fix that." />
-  <meta property="og:description" content="A Berlin community for people living between two worlds. Curated evenings for builders in AI, product, engineering and design. Not networking." />
+  <meta property="og:title" content="Entrohub — Small rooms in Berlin. Leave with one real next step." />
+  <meta property="og:description" content="Small evenings in Berlin for Chinese and international founders, builders and operators. One question per night. Leave with a name and a next step." />
   <meta property="og:url" content="https://entrohub.io/" />
   <meta property="og:image" content="https://entrohub.io/assets/entrohub-banner.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -26,13 +26,16 @@
     "alternateName": "Entrohub Berlin",
     "url": "https://entrohub.io/",
     "logo": "https://entrohub.io/assets/entrohub-icon.png",
-    "description": "A Berlin community for people living between two worlds. Entrohub runs curated evenings for builders and operators in AI, product, engineering and design. It is not networking; it exists to turn contact into real connection.",
+    "description": "A Berlin community for Chinese and international founders, builders and operators. Entrohub runs small evenings of around twenty people, each built around one practical question, so every participant leaves with a concrete next step.",
+    "founder": { "@type": "Person", "name": "Yuli Fang", "url": "https://www.linkedin.com/in/yulifang" },
     "foundingLocation": { "@type": "City", "name": "Berlin" },
     "areaServed": ["Berlin", "Europe"],
     "email": "hello@entrohub.io",
+    "knowsLanguage": ["zh", "en"],
     "sameAs": [
       "https://www.meetup.com/entrohub/",
-      "https://luma.com/entrohub"
+      "https://luma.com/entrohub",
+      "https://www.linkedin.com/company/theentrohub/"
     ]
   }
   </script>
@@ -138,6 +141,17 @@
     .join{ text-align:center }
     .join h2{ margin:0 auto 16px } .join .lead{ margin:0 auto 32px }
 
+    .rounds .card h3 small{ display:block; font-weight:500; color:var(--muted); font-size:13px; margin-top:4px; letter-spacing:.02em }
+    .take{ background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line) }
+    .take ul{ list-style:none; padding:0; margin:24px 0 0; display:grid; gap:12px; max-width:56ch }
+    .take li{ font-size:16px; padding-left:28px; position:relative }
+    .take li::before{ content:"→"; position:absolute; left:0; color:var(--orange); font-weight:800 }
+    .founder{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start }
+    @media(max-width:820px){ .founder{ grid-template-columns:1fr; gap:20px } }
+    .founder .who{ font-size:17px; margin:0 0 6px; font-weight:700 }
+    .founder p{ margin:0 0 12px; color:var(--muted); font-size:15.5px }
+    .partner .card a{ color:var(--accent); font-weight:600; text-decoration:none; font-size:14.5px; display:inline-block; margin-top:14px }
+    .langs{ margin-top:22px; font-size:14px; color:var(--muted) }
     footer{ border-top:1px solid var(--line); padding:44px 0; color:var(--muted); font-size:15px }
     footer .wrap{ display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; align-items:center }
     footer a{ text-decoration:none; color:var(--muted); margin-right:20px }
@@ -152,9 +166,9 @@
         <img class="logo-img logo-dark" src="/assets/entrohub-logo-light-text.png" alt="Entrohub" />
       </a>
       <nav>
-        <a href="#connection">Why we exist</a>
         <a href="#how">How it works</a>
-        <a href="#join">Join</a>
+        <a href="#partner">Partner with us</a>
+        <a href="#join">Next evening</a>
       </nav>
     </div>
   </header>
@@ -162,14 +176,14 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <p class="eyebrow">Berlin · A community for people between two worlds</p>
-        <h1>Plenty of contact. <span class="em">Almost no connection.</span></h1>
-        <p class="lede">Bars, apps, networking events. Most of it manufactures contact, not connection. Entrohub is where builders who live between two worlds actually get seen.</p>
+        <p class="eyebrow">Berlin · Chinese &amp; international founders, builders, operators</p>
+        <h1>Small rooms. <span class="em">One real next step.</span></h1>
+        <p class="lede">Every Entrohub evening is built around one question: finding a buyer, a partner, a first hire. Around twenty people, three short rounds. You leave with a name to follow up next week, not a stack of cards.</p>
         <div class="cta-row">
-          <a class="btn" href="https://luma.com/entrohub">Join the next evening</a>
-          <a class="btn ghost" href="#connection">What is Entrohub?</a>
+          <a class="btn" href="https://luma.com/entrohub">See the next evening</a>
+          <a class="btn ghost" href="#partner">Partner with us</a>
         </div>
-        <p class="micro">By application <span class="sep"></span> Around twenty per evening <span class="sep"></span> No pitching</p>
+        <p class="micro">Around twenty per evening <span class="sep"></span> One question per night <span class="sep"></span> No pitching</p>
       </div>
     </section>
 
@@ -177,60 +191,62 @@
       <div class="wrap">
         <span>Curated by hand</span><span class="sep"></span>
         <span>By application &amp; referral</span><span class="sep"></span>
-        <span>Same-kind rooms, not open door</span>
+        <span>Chinese or English, each event says which</span>
       </div>
     </div>
 
-    <section id="connection">
+    <section id="why">
       <div class="wrap">
-        <p class="lead big">The loneliness isn't being alone. It's being in a room full of people and not one of them seeing you.</p>
-        <p class="lead" style="margin-top:24px">Immigrants feel it in concentrate. You're suspended between two worlds, fully at home in neither, and a part of you belongs to both. It makes you lonely. It also makes you open. Entrohub is for people who have the fire and just aren't wired together yet.</p>
+        <p class="lead big">Most events give you contact. Very few give you a next step.</p>
+        <p class="lead" style="margin-top:24px">Many of us moved to Germany to build something. We know a lot of people and still don't know who to ask for the one thing we need right now. Entrohub keeps the room small and the question specific, so the right people actually find each other.</p>
       </div>
     </section>
 
-    <section>
+    <section id="how" class="rounds">
       <div class="wrap">
-        <h2>Connection needs three things in the room.</h2>
-        <p class="lead">It doesn't happen on its own. When all three are present, it does. It doesn't have to be deep. Real can happen in the middle of fun.</p>
+        <h2>How an evening works.</h2>
+        <p class="lead">Enough structure to get to the point. Never so much it feels like a workshop.</p>
         <div class="grid">
-          <div class="card">
-            <span class="dot d1"></span>
-            <h3>Trust</h3>
-            <p>We're the same kind of people. Nobody here has to perform.</p>
-          </div>
-          <div class="card">
-            <span class="dot d2"></span>
-            <h3>Permission</h3>
-            <p>You're allowed to walk up to a stranger. Be direct. Be real.</p>
-          </div>
-          <div class="card">
-            <span class="dot d3"></span>
-            <h3>Collision</h3>
-            <p>Different backgrounds, different roads, put in one room. That's where things come out.</p>
-          </div>
+          <div class="card"><span class="step-num">01 · ~40 min</span><h3>Same background<small>Engineers with engineers, the rest together</small></h3><p>Start with people who speak your language. Say the one thing you came for tonight.</p></div>
+          <div class="card"><span class="step-num">02 · ~40 min</span><h3>Different background<small>Short turns, then switch</small></h3><p>Put your question in front of people who see it from the other side. Write down who can help.</p></div>
+          <div class="card"><span class="step-num">03 · open</span><h3>Free rounds<small>Go back to the names you wrote</small></h3><p>Follow up while you are still in the room. Leave with one person and one next step.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="not">
+    <section class="take">
       <div class="wrap">
-        <h2>What we are not.</h2>
+        <h2>What you take home.</h2>
         <ul>
-          <li>Not networking.</li>
-          <li>Not a place to collect cards, hunt for resources, or sell yourself.</li>
-          <li>Not a performance for other people to watch.</li>
+          <li>One name worth messaging next week, and why.</li>
+          <li>One concrete next step on the thing you came with.</li>
+          <li>A room you can come back to.</li>
         </ul>
+        <p class="langs">Not a pitch night, and not a place to collect cards.</p>
       </div>
     </section>
 
-    <section id="how">
+    <section id="partner" class="partner">
       <div class="wrap">
-        <h2>How an evening works.</h2>
-        <p class="lead">Enough structure to make connection easy. Never so much it feels like a workshop.</p>
+        <h2>Partner with us.</h2>
+        <p class="lead">We work with a small number of partners who want to meet this room, or who can make an evening better.</p>
         <div class="grid">
-          <div class="card"><span class="step-num">01</span><h3>You apply</h3><p>Tell us who you are and what you're building. We keep the room balanced on purpose.</p></div>
-          <div class="card"><span class="step-num">02</span><h3>You show up</h3><p>A relaxed venue, around twenty people, two light rounds that break the ice for you. No pitching. No stage.</p></div>
-          <div class="card"><span class="step-num">03</span><h3>You leave with people</h3><p>Not business cards. Conversations worth continuing next week.</p></div>
+          <div class="card"><span class="dot d1"></span><h3>Host an evening</h3><p>Venues, offices and labs in Berlin. You get a room of founders and operators in your space.</p><a href="mailto:hello@entrohub.io?subject=Host%20an%20Entrohub%20evening">Offer a space →</a></div>
+          <div class="card"><span class="dot d2"></span><h3>Support an evening</h3><p>Companies and programs that want to meet Chinese and international builders in Germany. One evening at a time, no logo walls.</p><a href="mailto:hello@entrohub.io?subject=Support%20an%20Entrohub%20evening">Talk to us →</a></div>
+          <div class="card"><span class="dot d3"></span><h3>Co-host with your community</h3><p>Universities, programs and other communities. Bring your people, we bring ours, around one shared question.</p><a href="mailto:hello@entrohub.io?subject=Co-host%20with%20Entrohub">Co-host →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="founder">
+      <div class="wrap founder">
+        <div>
+          <h2>Who runs it.</h2>
+        </div>
+        <div>
+          <p class="who">Yuli Fang, founder</p>
+          <p>Engineer in Berlin. Started Entrohub to put the right people in one small room and see what they build next.</p>
+          <p><a href="mailto:hello@entrohub.io">hello@entrohub.io</a> · <a href="https://www.linkedin.com/in/yulifang">LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -239,8 +255,7 @@
       <div class="wrap">
         <blockquote>
           You don't need to be impressive. You just need to be real.
-          <!-- This is the brand line, not a testimonial. Keep it. -->
-          <span class="src">— From what we tell every new member</span>
+          <span class="src">— What we tell every new member</span>
         </blockquote>
       </div>
     </section>
@@ -248,7 +263,7 @@
     <section id="join" class="join">
       <div class="wrap">
         <h2>Come to the next one.</h2>
-        <p class="lead">We run regular evenings in Berlin. Grab a spot at the next Builders Night.</p>
+        <p class="lead">We run small evenings in Berlin. Dates, topics and language are on Luma.</p>
         <div class="cta-row" style="justify-content:center">
           <a class="btn" href="https://luma.com/entrohub">See upcoming events</a>
           <a class="btn ghost-fg" href="https://www.meetup.com/entrohub/">Join on Meetup</a>
@@ -263,6 +278,7 @@
       <div>
         <a href="https://luma.com/entrohub">Luma</a>
         <a href="https://www.meetup.com/entrohub/">Meetup</a>
+        <a href="https://www.linkedin.com/company/theentrohub/">LinkedIn</a>
         <a href="mailto:hello@entrohub.io">hello@entrohub.io</a>
       </div>
     </div>
